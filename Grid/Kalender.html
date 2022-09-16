@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            margin:20%;
+        }
+        .calendar {
+            width: 357px;
+           
+        }
+
+        .head {
+            display: flex;
+            background: red;
+            justify-content: center;
+        }
+
+        .head>.next,
+        .previous {
+            color: white;
+            place-self: center;
+            font: 22px bold;
+        }
+
+        .next {
+            position: relative;
+            left: 80;
+        }
+
+        .previous {
+            position: relative;
+            right: 80;
+        }
+
+        .head>.text {
+            font: bold 22px;
+            color: white;
+            margin: 20px;
+        }
+
+        .days-of-week {
+            display: flex;
+            background: rgb(243, 231, 231);
+        }
+
+        .days-of-week>.day {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-top: 10px;
+            width: 50px;
+        }
+
+        .date-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            font: 20px bold;
+        }
+
+        .date-grid .date {
+            display: grid;
+            border: 1px solid black;
+            text-align: center;
+            width: 49px;
+            height: 49px;
+            align-items: center;
+            
+            justify-items: center;
+        }
+
+        .date-grid .active {
+            color: black;
+        }
+
+        .date-grid :not(.active) {
+            color: rgb(216, 208, 208);
+        }
+
+        .week {
+            display: flex;
+        }
+
+        .week > :nth-child(6),
+        :nth-child(7) {
+            background: rgb(194, 188, 188);
+        }
+
+        .date:hover {
+            background-color: red;
+        }
+
+        .date .selected {
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="head">
+                <div class="previous">&#60;</div>
+                <div class="text"><b>september</b> 2020</div>
+                <div class="next">&#62;</div>
+            </div>
+            <div class="days-of-week">
+                <div class="day">Pax</div>
+                <div class="day">Sax</div>
+                <div class="day">Çax</div>
+                <div class="day">Pex</div>
+                <div class="day">Cux</div>
+                <div class="day">Cux</div>
+                <div class="day">Pxa</div>
+            </div>
+            <div class="date-grid">
+                <div class="week">
+                    <div class="date">31</div>
+                    <div class="date active">1</div>
+                    <div class="date active">2</div>
+                    <div class="date active">3</div>
+                    <div class="date active">4</div>
+                    <div class="date active">5</div>
+                    <div class="date active">6</div>
+                </div>
+                <div class="week">
+                    <div class="date active">7</div>
+                    <div class="date active">8</div>
+                    <div class="date active">9</div>
+                    <div class="date active">10</div>
+                    <div class="date active">11</div>
+                    <div class="date active">12</div>
+                    <div class="date active">13</div>
+                </div>
+                <div class="week">
+                    <div class="date active">14</div>
+                    <div class="date active">15</div>
+                    <div class="date active">16</div>
+                    <div class="date active">17</div>
+                    <div class="date active">18</div>
+                    <div class="date active">19</div>
+                    <div class="date active">20</div>
+                </div>
+                <div class="week">
+                    <div class="date active">21</div>
+                    <div class="date active">22</div>
+                    <div class="date active">23</div>
+                    <div class="date active">
+                        <div class="selected">24</div>
+                    </div>
+                    <div class="date active">25</div>
+                    <div class="date active">26</div>
+                    <div class="date active">27</div>
+                </div>
+                <div class="week">
+                    <div class="date active">28</div>
+                    <div class="date active">29</div>
+                    <div class="date active">30</div>
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
